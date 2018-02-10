@@ -1,6 +1,6 @@
-##Calling this.setState inside of a parent then passing that state as a prop to a child component leaves the child component 1 state behind. The parent state will update AFTER the child state is updated. 
+## Calling this.setState inside of a parent then passing that state as a prop to a child component leaves the child component 1 state behind. The parent state will update AFTER the child state is updated. 
 
-###ComponentDidMount for APP
+### ComponentDidMount for APP
 
 function componentDidMount(props) {
       var _this2 = this;
@@ -12,7 +12,7 @@ function componentDidMount(props) {
       console.log('This is state after setState was called in App. It\'s still 0. It should be 1', this.state.parentState);
     }
 
-###ComponentDidMount for Child
+### ComponentDidMount for Child
 
 function componentDidMount(props) {
             var _this2 = this;
