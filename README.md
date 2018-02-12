@@ -16,7 +16,7 @@ setState for App actually finished. This was called inside of setState
 ### ComponentDidMount for APP
 ```
 function componentDidMount(props) {
-
+var _this2 = this;
 this.setState({ parentState: 1 }, function () {
 
 return console.log('setState for App actually finished. This was called inside of setState', _this2.state.parentState);});
@@ -27,6 +27,7 @@ console.log('This is state after setState was called in App. It\'s still 0. It s
 ### ComponentDidMount for Child
 ```
 function componentDidMount(props) {
+    var _this2 = this;
     this.setState({ parentState: this.props.parentState }, function () {
     
     return console.log("setState for Child actually finished. Because App never setState yet, Child is still 0. This was called inside of the setState", _this2.state.parentState);});
